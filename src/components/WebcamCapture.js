@@ -519,9 +519,6 @@ const WebcamCapture = () => {
             <li>• Tombol "Ucapkan Manual" untuk TTS browser</li>
           </ul>
         </div>
-        <div className="mt-4 text-sm text-blue-600 bg-blue-100 p-3 rounded">
-          <strong>Production Info:</strong> Backend: {API_BASE_URL}
-        </div>
       </div>
     </div>
   );
