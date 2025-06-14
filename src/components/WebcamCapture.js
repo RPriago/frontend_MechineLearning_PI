@@ -43,7 +43,7 @@ const WebcamCapture = () => {
     };
 
     checkConnection();
-  }, []);
+  }, [API_BASE_URL]);
 
   const captureAndSend = useCallback(async () => {
     if (!cameraEnabled || !webcamRef.current || isProcessing || connectionStatus !== 'connected') {
@@ -137,7 +137,7 @@ const WebcamCapture = () => {
     } finally {
       setIsProcessing(false);
     }
-  }, [cameraEnabled, sentence, lastCharTime, isProcessing, connectionStatus]);
+  }, [cameraEnabled, sentence, lastCharTime, isProcessing, connectionStatus, API_BASE_URL]);
 
   const toggleCamera = async () => {
     if (connectionStatus !== 'connected') {
@@ -378,7 +378,6 @@ const WebcamCapture = () => {
             <h3 className="font-bold">Backend Connection Issue</h3>
             <p>Unable to connect to the backend server. Please check:</p>
             <ul className="mt-2 list-disc list-inside text-sm">
-              <li>Backend server is running at: {API_BASE_URL}</li>
               <li>Your internet connection</li>
               <li>CORS settings on the backend</li>
             </ul>
