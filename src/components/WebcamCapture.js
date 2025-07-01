@@ -21,7 +21,7 @@ const WebcamCapture = () => {
   const CHAR_DELAY = 1.5; // Matches backend's char_delay
   const INITIAL_DELAY = 2; // Matches backend's initial_delay
   // Updated API URL untuk production
-  const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://127.0.0.1:8000';
+  const API_BASE_URL = process.env.REACT_APP_API_URL || 'https://backend-mechinelearning-pi.onrender.com';
 
   // Check API connection on component mount
   useEffect(() => {
